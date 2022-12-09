@@ -32,6 +32,7 @@
   }
   .scroll-style::-webkit-scrollbar-thumb {
     @apply rounded-full bg-gradient-to-tr from-blue-500 to-green-500 via-teal-500;
+  
   }
    
   /* Theme-Colors */
