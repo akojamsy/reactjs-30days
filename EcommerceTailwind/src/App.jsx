@@ -1,13 +1,14 @@
 import { useState } from "react";
 import "./App.css";
-import { Hero, Sales } from "./components";
-import FeaturedHightlight from "./components/FeaturedHightlight";
+import { Hero, Sales, FeaturedHightlight, TopStories } from "./components";
+import "@splidejs/react-splide/css";
 import {
   heroapi,
   popularsales,
   toprateslaes,
   featured,
   highlight,
+  story,
 } from "./data/data";
 
 function App() {
@@ -19,9 +20,10 @@ function App() {
       <div className='relative flex flex-col gap-16'>
         <Hero heroapi={heroapi} />
         <Sales sales={popularsales} exist />
-        <Sales sales={toprateslaes} />
-        <FeaturedHightlight data={featured} />
         <FeaturedHightlight data={highlight} />
+        <Sales sales={toprateslaes} />
+        <FeaturedHightlight data={featured} exist />
+        <TopStories news={story.news} title={story.title} />
       </div>
     </>
   );
