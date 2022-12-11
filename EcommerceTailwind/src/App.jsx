@@ -1,6 +1,12 @@
 import { useState } from "react";
 import "./App.css";
-import { Hero, Sales, FeaturedHightlight, TopStories } from "./components";
+import {
+  Hero,
+  Sales,
+  FeaturedHightlight,
+  TopStories,
+  Footer,
+} from "./components";
 import "@splidejs/react-splide/css";
 import {
   heroapi,
@@ -9,6 +15,7 @@ import {
   featured,
   highlight,
   story,
+  footer,
 } from "./data/data";
 
 function App() {
@@ -17,14 +24,15 @@ function App() {
   // console.log(heroapi);
   return (
     <>
-      <div className='relative flex flex-col gap-16'>
+      <main className='relative flex flex-col gap-16'>
         <Hero heroapi={heroapi} />
         <Sales sales={popularsales} exist />
         <FeaturedHightlight data={highlight} />
         <Sales sales={toprateslaes} />
         <FeaturedHightlight data={featured} exist />
         <TopStories news={story.news} title={story.title} />
-      </div>
+      </main>
+      <Footer footer={footer} />
     </>
   );
 }

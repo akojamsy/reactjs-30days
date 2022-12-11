@@ -68,7 +68,7 @@ const Item = ({
             className={`transitions-theme hover:-rotate-12 ${
               exist
                 ? "h-auto w-64 lg:w-56 md:w-48  xsm:w-35 -rotate-[35deg]"
-                : ""
+                : "h-36 w-64"
             }`}
             src={img}
             alt='item-img'

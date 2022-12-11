@@ -342,7 +342,7 @@ const story = {
   ],
 };
 
-const footerAPI = {
+const footer = {
   titles: [
     { title: "About Nike" },
     { title: "Get Help" },
@@ -378,7 +378,7 @@ const footerAPI = {
 
 export {
   heroapi,
-  footerAPI,
+  footer,
   story,
   featured,
   highlight,
