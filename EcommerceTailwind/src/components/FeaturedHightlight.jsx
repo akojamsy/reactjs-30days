@@ -15,7 +15,7 @@ const FeaturedHightlight = ({
           <h1 className='text-4xl sm:text-3xl font-bold text-gradient'>
             {heading}
           </h1>
-          <h2 className='text-5xl lg:text-4xl md:text-3xl sm:text-2xl xsm:text-2xl text-slate-900 filter drop-shadow-lg '>
+          <h2 className='text-5xl lg:text-4xl md:text-3xl sm:text-2xl xsm:text-2xl text-slate-900 filter drop-shadow-lg'>
             {title}
           </h2>
           <p className='xl:text-sm'>{text}</p>
@@ -25,7 +25,7 @@ const FeaturedHightlight = ({
             role='button'
             href={url}
           >
-            <button className='button-theme bg-slate-900 text-slate-100 shadow-slate-900 py-1.5 cursor-pointer  '>
+            <button className='button-theme bg-slate-900 text-slate-100 shadow-slate-900 py-1.5 cursor-pointer '>
               {btn}
             </button>
           </a>

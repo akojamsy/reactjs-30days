@@ -6,6 +6,8 @@ import {
   FeaturedHightlight,
   TopStories,
   Footer,
+  Navbar,
+  Cart,
 } from "./components";
 import "@splidejs/react-splide/css";
 import {
@@ -25,6 +27,8 @@ function App() {
   return (
     <>
       <main className='relative flex flex-col gap-16'>
+        <Cart />
+        <Navbar />
         <Hero heroapi={heroapi} />
         <Sales sales={popularsales} exist />
         <FeaturedHightlight data={highlight} />
