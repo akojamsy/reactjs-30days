@@ -2,12 +2,15 @@ import React from "react";
 import ChevronLeft from "./../utils/ChevronLeft";
 import { IoClose } from "react-icons/io5";
 
-const CartCount = () => {
+const CartCount = ({ handleCartItems }) => {
   return (
     <>
       <div className='w-full h-11 flex items-center justify-between sticky bg-white top-0 left-0 right-0 '>
         <div className='flex items-center gap-3 ml-3'>
-          <div className='grid items-center cursor-pointer'>
+          <div
+            className='grid items-center cursor-pointer'
+            onClick={handleCartItems}
+          >
             <ChevronLeft className='w-6 h-6 hover:text-orange-600 text-slate-900 stroke-[2]' />
           </div>
           <div className='grid items-center'>

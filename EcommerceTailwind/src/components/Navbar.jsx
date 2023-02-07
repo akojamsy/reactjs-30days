@@ -5,15 +5,24 @@ import {
   HeartIcon,
   ShoppingBagIcon,
 } from "@heroicons/react/24/solid";
+import { setOpenCart } from "../redux/slice/CartSlice";
+import { useDispatch } from "react-redux";
 
 const Navbar = () => {
+  const dispatch = useDispatch();
+
   const [navState, setNavbarState] = useState(false);
+
   const onNavScroll = () => {
     if (window.scrollY > 30) {
       setNavbarState(true);
     } else {
       setNavbarState(false);
     }
+  };
+
+  const handleCartToggle = () => {
+    dispatch(setOpenCart({ cartState: true }));
   };
 
   useEffect(() => {
@@ -54,7 +63,7 @@ const Navbar = () => {
               }`}
             />
           </li>
-          <li className='grid items-center'>
+          <li className='grid items-center' onClick={handleCartToggle}>
             <button
               type='button'
               className='outline-none relative transition-all duration-300 active:scale-105'
