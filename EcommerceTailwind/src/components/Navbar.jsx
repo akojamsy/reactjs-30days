@@ -6,9 +6,13 @@ import {
   ShoppingBagIcon,
 } from "@heroicons/react/24/solid";
 import { setOpenCart } from "../redux/slice/CartSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const Navbar = () => {
+  const cartTotalQuantity = useSelector(
+    (state) => state.cart?.cartTotalQuantity
+  );
+
   const dispatch = useDispatch();
 
   const [navState, setNavbarState] = useState(false);
@@ -76,7 +80,7 @@ const Navbar = () => {
               <div
                 className={`absolute h-4 w-4 right-0 top-4 shadow shadow-slate-100 text-slate-900 bg-white leading-tight font-medium rounded-full flex justify-center items-center cursor-pointer hover:scale-110 transition-all duration-300`}
               >
-                0
+                {cartTotalQuantity}
               </div>
             </button>
           </li>

@@ -2,7 +2,7 @@ import React from "react";
 import ChevronLeft from "./../utils/ChevronLeft";
 import { IoClose } from "react-icons/io5";
 
-const CartCount = ({ handleCartItems }) => {
+const CartCount = ({ handleCartItems, cartTotalQuantity }) => {
   return (
     <>
       <div className='w-full h-11 flex items-center justify-between sticky bg-white top-0 left-0 right-0 '>
@@ -17,12 +17,12 @@ const CartCount = ({ handleCartItems }) => {
             <h2>
               Your cart
               <span className='bg-theme-cart rounded text-slate-100 px-1 py-0.5 ml-2 text-xs'>
-                (Items)
+                ({cartTotalQuantity} Items)
               </span>
             </h2>
           </div>
         </div>
-        <div>
+        <div onClick={handleCartItems}>
           <IoClose className='bg-theme-cart rounded text-slate-100 px-1 mr-5 py-0.5 ml-2 text-xl active:scale-90 cursor-pointer' />
         </div>
       </div>
